@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% for msg in get_flashed_messages() %}
+<p class="invalid-word-message">{{msg}}</p>
+{% endfor %}
+
+<div id="gameboard">
+    <table>
+        {% for row in gameboard %}
+        <tr>
+        {% for cell in row %}
+            <td class="letter" name="{{row.index(cell)}}{{gameboard.index(row)}}">{{cell}}</td>
+        {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <div id="timer">
+    </div>
+    <div id="form">
+    </div>
+    <div id="word-list" class="user-element stats">
+        <ol> Score: {{session['score']}}
+            {% for word in session['valid_words'] %}
+            <li>{{word}}</li>
+            {% endfor %}
+        </ol>
+    </div>
+    <div id="stats-sheet" class="user-element stats">
+       <p>High Score: {{session['high_score']}}</p>
+       <p>Times Played: {{session['times_played']}}</p>
+    </div>
+</div>
+
+<script src="static/gameboard.js"></script>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Price</title>
+</head>
+<body>
+    <h1>Price Prediction:</h1>
+    {% if quantity > 10 %}
+        <p>You're a little fatass ain't you?</p>
+    {% else %}
+        <h2>Now that's a healthy meal!</h2>
+    {% endif %}
+
+    <ol> Your items </ol>
+    {% for number in range(quantity)%}
+        <li>{{food}} - $100,000</li>
+    {% endfor %}
+    <p>TOTAL: ${{quantity * 100000}}</p>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+body {
+    background-color: green;
+}
+
+#cards {
+    background-color: #0b5e16;
+}
+
+.button {
+    background-color: white;
+    border: solid 1px red;
+}

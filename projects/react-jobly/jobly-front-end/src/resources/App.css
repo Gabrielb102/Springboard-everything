@@ -1,0 +1,15 @@
+
+.App {
+  position: relative;
+  top: 50px;
+}
+
+.App-title {
+  display: inline;
+  text-align: left;
+  color: black;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+

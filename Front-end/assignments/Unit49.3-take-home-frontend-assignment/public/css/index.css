@@ -1,0 +1,46 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    background-image: linear-gradient(to bottom left, red, violet);
+}
+
+.link {
+    background-color: white;
+    color: orange;
+    padding: 9px 15px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2px;
+    border-color: black;
+}
+
+.link:hover {
+    border-color: #FFD580;
+}
+
+h3 {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+h3:link { text-decoration: none; }
+h3:visited { text-decoration: none; }
+h3:hover { text-decoration: none; }
+h3:active { text-decoration: none; }
+
+nav {
+    background-color: rgb(255, 243, 230, .5);
+    display: inline-block;
+}
+
+
+

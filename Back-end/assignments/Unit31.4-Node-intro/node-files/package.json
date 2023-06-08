@@ -1,0 +1,14 @@
+{
+  "name": "files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "step1.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Gabriel!",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

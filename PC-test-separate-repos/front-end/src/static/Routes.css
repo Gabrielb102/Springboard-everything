@@ -1,0 +1,11 @@
+.Routes-title {
+    font-size: 60px;
+    display: inline;
+    margin: 20px;
+}
+
+.Routes-title A:link {text-decoration: none; color: #000000;}
+.Routes-title A:visited {text-decoration: none; color: #000000;}
+.Routes-title A:hover {text-decoration: none; color: #440752; transition-duration: 200ms;}
+.Routes-title A:active {text-decoration: none; color: #000000;}
+

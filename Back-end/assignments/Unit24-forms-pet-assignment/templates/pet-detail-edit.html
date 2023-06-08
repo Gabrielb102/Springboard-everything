@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block body %}  
+<header>
+<h1>{{pet.name}}</h1>
+    <nav>
+        <p>every pet should have a great owner <3 </p>
+        <a href="/">Home</a>
+    </nav>
+</header>
+<div id="page">
+    <div id="detail">
+        <h2>{{pet.name}}'s Details</h2>
+        <img id='detail-pic' src="{{pet.photo_url}}" alt="{{pet.name}}'s picture">
+        <ul>
+            <li>Species: {{pet.species}}</li>
+            <li>Age: {{pet.age}} years old</li>
+
+            {% if pet.notes %}
+            <li>Notes: {{pet.notes}}</li>
+            {% endif %}
+            
+            {% if pet.available %}
+            <li> AND THEY'RE AVAILABLE!!</li>
+            {% else %}
+            <li>And they're taken, sorry :/</li>
+            {% endif %}
+
+        </ul>
+    </div>
+    <form method="POST">
+        <p>Edit {{pet.name}}'s Info</p>
+        {{ form.hidden_tag() }}
+
+        {% for field in form if field.widget.input_type != 'hidden' %}
+        <p>
+            {{ field }}
+
+            {% for err in field.errors %}
+            <p class="error"> {{ err }} </p>
+            {% endfor %}
+
+        </p>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

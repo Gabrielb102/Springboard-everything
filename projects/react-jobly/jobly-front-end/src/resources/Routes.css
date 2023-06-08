@@ -1,0 +1,12 @@
+main {
+    border-style: solid;
+    border-radius: 20px;
+    border-color: lightgray;
+    border-width: 2px;
+    width: 530px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 40px;
+    padding-top: 20px;
+    background-color: white;
+}

@@ -1,0 +1,32 @@
+.SearchForm {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 16px;
+    text-align: left;
+    width: 60%;
+}
+
+#searchbar {
+    width: 50%;
+    height: 20px;
+    margin: 5px;
+}
+
+.SearchForm-input {
+    height: 20px;
+    width: 120px;
+    margin: 5px;
+}
+
+.SearchForm-dropdown {
+    height: 26px;
+    margin: 5px;
+}
+
+.SearchForm button {
+    height: 26px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: #5e00ab;
+}

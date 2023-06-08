@@ -1,0 +1,10 @@
+.Color {
+    margin: auto;
+    margin-top: 50px;
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-color: maroon;
+    border-width: 3px;
+    border-radius: 100px;
+}

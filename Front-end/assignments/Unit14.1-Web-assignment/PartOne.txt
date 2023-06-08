@@ -1,0 +1,30 @@
+        PART ONE
+
+        What is HTTP?
+Http is a protocol through which computers and servers communicate to send and receive requests and responses. A protocol is a set of rules and an expected structure for requests and responses. 
+
+        What is a URL?
+A URL is an address which represents a server and the request being sent to that server. Specifically, a URL specifies the protocol for the request, the hostname of the server, the port it wishes to access (and if not, there's a default port depending on the protocol) the particular resource it's looking for on the server, as well as the query if one is being made. 
+
+        What is DNS?
+The DNS, the Domain Name System, provides the IP address for a hostname. It is a directory which matches up IP addresses to hostnames, and can be used to look up either. The DNS is used if the address or hostname is not found on the browswer, local system, router, or through the ISP.  
+
+        What is a query string?
+A query string is the search terms that are input to the site when making a query. 
+
+        What are two HTTP verbs and how are they different?
+Two HTTP verbs are GET and POST. Get doesn't have any server side effects, and only requests data from the server. POST comes with more data that affects what is on the server. 
+
+        What is an HTTP request?
+An HTTP request is the initial data that is sent to a server, and asks for certain resources. It describes the data that it requires on a webpage. Altogether, the request is made of the method being used (the "verb") declaration of the protocol being used, the resources that are bieng requested, and the relevant data of the request in the header, like the hostname and resources requested, as well as metadata of the request, such as the browser conditions and time and date. 
+
+        What is an HTTP response?
+The HTTP response is sent in reaction to a request, and if possible, fulfills the request. A server constructs a response to fulfill the requests before sending it out as a webpage. It also lists the protocol being used, it gives a response code detailing the type of response and the status of the resources requested, and a header which contains the resources requested as well as any appropriate metadata provided by the server. 
+
+        What is an HTTP header? Give a couple examples of request and response headers you have seen.
+An HTTP header contains all the relevant data for a request or a response. A request contains all the data necessary to find the information it is looking for, and a response header contains all the data needed to fulfill the request. Request headers are usually pretty small compared to response headers, as I saw on the video lecture for veiwing HTTP responses, however I can't see request headers on the browser extension for Rested. The response headers are very long, and for https://www.coolmathgames.com/ it includes the content type and language, as well as the links to the security policy, and the content length. 
+
+        What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+Using the HTTP protocol, my computer sends a request to the server at the IP address behind the "somesite.com" hostname. This happens by first searching for the IP address in the browser, then the computer, then the router at the cafe that I'm at, then the Internet Service Provider that they use, which I think is Cox Communications, then it contacts the DNS. After that, the server at somesite.com takes the request and constructs a response. Since it loaded, the response status is 200, and the data comprising the page is sent with the response, which then loads on my screen.
+
+

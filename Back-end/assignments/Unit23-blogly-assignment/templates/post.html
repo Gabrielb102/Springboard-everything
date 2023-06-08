@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form action="/users/{{post.author.id}}">
+    <button class="title" type="submit"> 
+        <img class="prof-pic" src="{{post.author.image_url}}" alt="Back to {{post.author.first_name}}'s page">
+        <h3>{{post.author.first_name}}'s Posts</h3>
+    </button>
+</form>
+<div>
+    <h2>{{post.title}}</h2>
+    <p>{{post.content}}</p>
+    <div style="width: 400px; margin-top: 25px; margin-bottom: 25px;">
+        {% for tag in tags %}
+
+        <a href="/tags/tag{{tag.id}}" class="tag">{{tag.tag}}</a>
+    
+        {% endfor %}    
+    </div>
+</div>
+<div id="adjustments">
+    <form action="/users/{{post.author.id}}/post{{post.id}}/edit" method="GET">
+        <button id="edit" class="button" type="submit">EDIT</button>
+    </form>
+    <form action="/users/{{post.author.id}}/post{{post.id}}/delete" method="POST">
+        <button class="button delete" type="submit">DELETE</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+.List {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+
+
+.List-title {
+    position: relative;
+    left: 33px;
+}
+
+.List-form input {
+    display: inline;
+    margin-right: 10px;
+    height: 25px;
+    width: 85%;
+}
+
+.List-form button {
+    display: inline;
+    height: 30px;
+}

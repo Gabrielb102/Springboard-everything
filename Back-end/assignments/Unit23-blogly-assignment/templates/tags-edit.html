@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>Edit Tags</h2>
+<form action="/tags/edit" method="POST">
+    <ul>
+    {% for tag in tags %}
+        <li> 
+            <input type="text" class="tag" name="{{tag.id}}" value="{{tag.tag}}" required>
+            <a class="button delete" href="/tags/tag{{tag.id}}/delete" method="POST"> delete tag </a>
+        </li>
+    {% endfor %}
+    </ul>
+    <button type="submit" class="button">SAVE</button>    
+</form>
+{% endblock %}

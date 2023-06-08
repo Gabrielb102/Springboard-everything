@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}  
+<header>
+    <h1>All Potential Pets</h1>
+    <nav>
+        <p>maybe yours?</p><a href="/add">Submit pet for adoption!</a>
+    </nav>
+</header>
+<div id="page">
+    {% for pet in pets %}
+    <a href="/{{pet.id}}">
+        <div id="pet">
+            <img src="{{pet.photo_url}}" alt="{{pet.name}}'s Picture">
+            <b>{{pet.name}}</b>
+            <p>Species: {{pet.species}} <br>
+            Age: {{pet.age}}</p>
+            {% if pet.available %}
+            <b>Available!</b>
+            {% else %}
+            <b>Not Available</b>
+            {% endif %}
+        </div>    
+    </a>
+{% endfor %}
+</div>
+
+{% endblock %}

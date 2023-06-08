@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<a class="title" href="/users"> 
+    <h2>Users</h2>
+</a>
+<form action="/users/new" method="POST">
+    <ul>
+        <li>        
+            <label for="first_name">Your First Name</label>
+            <input id="first_name" type="text" name="first_name" required>
+            <p> </p>
+        </li>
+        <li>        
+            <label for="last_name">Your Last Name</label>
+            <input id="last_name" type="text" name="last_name">
+            <p> </p>
+        </li>
+        <li>
+            <label for="image_url">Profile Picture URL</label>
+            <input id="image_url" type="url" name="image_url"> 
+            <p> </p>   
+        </li>
+        <li>
+            <button type="submit" class="button">Submit</button>
+            <a id='delete' href="/users" class="button delete"> Cancel </a>
+        </li>
+    </ul>
+</form>
+
+{% endblock %}

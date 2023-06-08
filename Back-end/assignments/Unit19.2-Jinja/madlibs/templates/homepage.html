@@ -1,0 +1,8 @@
+{% block body%}
+<h2>Choose from one of the stories below</h2>
+<form action="/prompt_form">
+{% for story in stories %} 
+    {{story|safe}}
+{% endfor %}
+</form>
+{% endblock %}

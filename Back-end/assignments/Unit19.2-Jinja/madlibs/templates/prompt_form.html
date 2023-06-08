@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form action="/story" id="answers" name="answers">
+    <ul> Fill the prompts with your ZaNIeSt words!
+        {% for prompt in prompts %}
+            {{prompt|safe}}
+        {% endfor %}
+    </ul>
+    <button>Submit!</button>
+</form>
+{% endblock %}

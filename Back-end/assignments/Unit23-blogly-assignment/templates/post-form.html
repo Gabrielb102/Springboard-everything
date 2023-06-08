@@ -1,0 +1,12 @@
+{% extends 'post-base.html' %}
+{% block posttitle %}
+<h2>New Post</h2>
+<form action="/users/{{user.id}}/newpost" method="POST"> 
+{% endblock %}
+{% block content %} {% endblock %}
+{% block tags %}
+{% for tag in tags %}
+<input id="{{tag.id}}" type="checkbox" style="display: none;" name="tag_id" value="{{tag.id}}">
+<label for="{{tag.id}}">{{tag.tag}}</label>
+{% endfor %}
+{% endblock %}

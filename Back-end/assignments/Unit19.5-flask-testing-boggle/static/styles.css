@@ -1,0 +1,101 @@
+#title-banner {
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.user-element {
+    padding: 10px;
+    background-color: rgb(106, 170, 237);
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: black;
+}
+
+#title {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url("images/andrey-metelev-gamebackground.jpg")
+}
+
+.letter {
+    border-style: solid;
+    border-width:  2px;
+    border-color: blanchedalmond;
+    height: 50px;
+    width: 50px;
+    background-color: blanchedalmond;
+    color: black;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+#word-form {
+    margin: auto;
+    width: 220px;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.input {
+    background-color: white;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+#button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.invalid-word-message {
+    color: rgb(156, 23, 0);
+    background-color: yellow;
+}
+
+table {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    border-style: solid;
+}
+
+#gameboard {
+    text-align: center;
+    position: relative;
+    margin: 0, auto;
+}
+
+.stats {
+    position: absolute;
+    top: 0px;
+    min-width: 150px;
+    max-width: 500px;
+    min-height: 50px;
+    background-color: rgb(0,0,0,.3);
+    text-align: left;
+    color:white ;
+}
+
+#word-list {
+    left: 65%;
+    margin-right: 150px;
+}
+
+#stats-sheet {
+    right: 65%;
+    margin-left: 150px;
+}

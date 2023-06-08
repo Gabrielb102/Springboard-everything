@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{{user.username}}'s User Page{% endblock %}
+{% block pagetitle %}{{user.username}}{% endblock %}
+{% block body %}
+<h2>{{user.first_name}} {{user.last_name}}</h2>
+<p>Contact: {{user.email}}</p>
+<h3>Feedback</h3>
+<ul>
+    {% for post in user_feedback %}
+    <li>
+        <a href="/feedback/{{post.id}}">{{post.title}}</a>
+        <a class="button" href="/feedback/{{post.id}}/update">Edit Post</a>
+    </li>
+    {% endfor %}
+    <li>
+        <a class="button" href="/users/{{user.username}}/feedback/add">Add more feedback</a>
+    </li>
+</ul>
+<form action="/users/{{user.username}}/delete" method="POST">
+    <button type="submit" class="button">delete user</button>
+</form>
+{% endblock %}

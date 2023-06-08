@@ -1,0 +1,1 @@
+Parts 1-3 of this assignment have been completed. By the time I was finishing part four of this assignment, I was past five hours of work, so I decided just to turn in the assignment to get on with the course since it was holding me back, and it would cause me to throw away more than a day of work with my schedule. 

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<ul>
+    <h2>Posts tagged "{{tag.tag}}"</h2>
+    <a class="button" href="/tags">See All Tags</a>
+
+{% for post in posts %}
+
+    <li> 
+        <a href="/users/{{post.author.id}}/post{{post.id}}"> 
+            {{post.title}}
+        </a>
+    </li>
+
+{% endfor %}
+</ul>
+
+{% endblock %}

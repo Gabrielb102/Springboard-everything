@@ -1,0 +1,8 @@
+QUIZ
+1. The difference between var and let is that the scope of variables created with var is the function or the code in general. The declaration of the var variable is hoisted to the top, although the variable isn't defined until it is defined in the code. Unless it is in a function, it stays defined even if it was located in a code-block. Variables declared with let have a scope that includes just the code block, and their declaration is not hoisted to the top of the page. The let variables' declaration and definition are not distinct.
+
+2. Var and const variables have different scopes and are initialized differently in the same way var and let are different. Var variables are function scoped and const variables are have block scope. With const however, there is another key difference, which is that although var variables can be reassigned and redeclared, const variables cannot be reassigned or redeclared.
+
+3. Let and const both have block scope, and are different only in that let variables can be reassigned and const variables cannot be reassigned.
+
+4. Hoisting is where a certain action is executed at a different place in the code. The declaration of var variables is hoisted to the top of its scope, apart from its defining.

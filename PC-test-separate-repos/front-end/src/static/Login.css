@@ -1,0 +1,46 @@
+
+.Login {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    border: solid black 1px;
+    padding: 15px;
+    padding-top: 0px;
+    border-radius: 20px;
+}
+
+.Login input {
+    margin-bottom: 5px;
+    border: 0px;
+    border-radius: 4px;
+    float: right;
+    background-color: #f2f2f2;
+}
+
+.Login label {
+    text-align: right;
+    clear: both;
+    float: left;
+    margin-right:15px;
+}
+
+.Login button {
+    border: 0px;
+    border-radius: 4px;
+    background-color: #edd6ff;
+    clear: both;
+    float: right;
+}
+
+#Login-flash {
+    position: absolute ;
+    top: 138px;
+    left: 150px;
+    font-size: 10px;
+    color: red;
+    background-color: RGB(255, 0, 0, .1);
+    border: solid red 1px;
+    border-radius: 7px;
+    padding: 0px 4px 0px 4px;
+    line-height: .5;
+}

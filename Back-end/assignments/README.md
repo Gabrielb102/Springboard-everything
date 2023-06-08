@@ -1,0 +1,1 @@
+This is the folder for all my assignemnts for section 2. This should include all of my back-end assignments for Springboard. Thank you and enjoy :P

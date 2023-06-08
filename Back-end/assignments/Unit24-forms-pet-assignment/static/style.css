@@ -1,0 +1,93 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: lime;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    background-color: darkgreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+nav > p {
+    display: inline;
+}
+
+nav > a {
+    color: black;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    border-radius: 3px;
+    background-color: greenyellow;
+    padding: 3px;
+    display: inline;
+    margin-left: 10px;
+}
+
+nav > a:hover {
+    background-color: white;
+}
+
+#page {
+    position: absolute;
+    top: 150px;
+    background-color: slategrey;
+    width: 90%;
+    margin: auto;
+}
+
+#pet {
+    display: inline-block;
+    background-color: green;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    width: 225px;
+    height: 340px;
+    margin: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: darkgreen;
+}
+
+#pet:hover {
+    border-color: lightgreen;
+}
+
+img {
+    border-style: solid;
+    border-color: darkgreen;
+    border-width: 3px;
+    margin-top: 12px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+form {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error {
+    display: inline;
+    color: red;
+}
+
+#detail-pic {
+    height: 400px;
+    width: 400px;
+}

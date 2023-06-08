@@ -1,0 +1,20 @@
+.NewItemForm {
+    text-align: center;
+}
+
+.NewItemForm-input {
+    display: block;
+    width: 250px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: aliceblue;
+}
+
+.button:hover {
+    background-color: goldenrod;
+}

@@ -1,0 +1,21 @@
+.pokecard {
+    display : inline-block;
+    background-color: white;
+    border-style : solid;
+    border-radius: 15px;
+    border-color : black;
+    width : 200px;
+    height : 200px;
+    margin : 5px;
+    text-align: center;
+    size : 20px;
+}
+
+.pokecard-image {
+    display : block;
+    margin : auto;
+    margin-top : 0px;
+    margin-bottom : -18px;
+    height: 150px;
+    width : 150px;
+}

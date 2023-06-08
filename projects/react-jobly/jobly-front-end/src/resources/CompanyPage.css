@@ -1,0 +1,8 @@
+.CompanyPage > img {
+    border-style: solid;
+    border-radius: 1;
+    border-color: black;
+    height: 400px;
+    width: 525px;
+    object-fit: contain;
+}

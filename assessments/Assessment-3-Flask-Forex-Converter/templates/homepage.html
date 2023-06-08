@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<div>
+    <form action="/convert" method="GET">
+        <label for="currency-in">Input Currency: </label>
+        <input id="currency-in" name="currency-in" class="form" type="text" autocapitalize="True" placeholder="Three Letter Symbol" required>
+        <label for="amount"> Amount </label>
+        <input id="amount" name="amount" class="form" type="number" placeholder="Integer Amount" required>
+        <label for="currency-out">Output Currency: </label>
+        <input id="currency-out" name="currency-out" class="form" type="text" autocapitalize="True" placeholder="Three Letter Symbol" required>
+        <button type="submit">Enter</Button>
+    </form>
+</div>
+<div>
+{% if get_flashed_messages() %}
+{% for message in get_flashed_messages() %}
+<p class="flash">{{message}}</p>
+{% endfor %}
+{% endif %}
+{% if session['output'] %}
+    <p>{{session['output']}}</p>
+{% endif %}
+</div>
+{% endblock %}

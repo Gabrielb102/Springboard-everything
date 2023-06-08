@@ -1,0 +1,14 @@
+.info {
+    display: inline-block;
+    position: relative;
+    border: solid gainsboro 1px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+}
+
+.info li{
+    font-size: 12px;
+    text-align: left;
+}

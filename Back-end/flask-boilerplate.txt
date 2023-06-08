@@ -1,0 +1,145 @@
+throw venv and secrets.py in .gitignore
+
+requirements
+
+Flask==2.1.1
+Flask-DebugToolbar==0.13.1
+Flask-SQLAlchemy==2.5.1
+Flask-WTF==1.0.1
+psycopg2==2.9.3
+SQLAlchemy==1.4.35
+WTForms==3.0.1
+
+_________APP.PY___________
+from flask import Flask, request, flash, request, render_template, redirect 
+from flask_debugtoolbar import DebugToolbarExtension
+from models import db, connect_db, MODELNAME
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = "SECRET_KEY"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///DATABASE NAME"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+debug = DebugToolbarExtension(app)
+
+connect_db(app)
+
+_________MODELS.PY__________
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
+def connect_db(app):
+    """Connect to database."""
+
+    db.app = app
+    db.init_app(app)
+
+class MODELNAME(db.Model) :
+    """WHAT DOES IT MODEL"""
+
+    __tablename__="TABLE NAME"
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    flavor = db.Column(db.String, nullable=False)
+    size = db.Column(db.String, nullable=False)
+    rating = db.Column(db.Float, nullable=False)
+    image = db.Column(db.String, nullable=False, default='https://tinyurl.com/demo-cupcake')
+
+    def __repr__(self) :
+        c = self
+        return f"HOW WOULD YOU REPRESENT YOUR MODEL"
+
+________FORMS.PY_________
+from flask_wtf import FlaskForm
+from wtforms import StringField, FloatField, IntegerField, RadioField, TextAreaField, BooleanField (BASED ON WHAT YOU NEED)
+
+from wtforms.validators import InputRequired, Optional, URL, Length (BASED ON WHAT YOU NEED)
+
+class FORMNAME(FlaskForm) :
+    """WHATS YOUR FORM DOE MA'E"""
+
+    name = StringField("The new Pet's name", validators=[InputRequired(message='The new guy must have a name')])
+    species = StringField('Species', validators=[InputRequired(message='What kind of an animal are they?')])
+    photo_url = StringField('Photo URL', validators=[Optional(), Length(min=10, message='Photo URL must be a valid photo URL'), URL(message='Photo URL must be a valid photo URL')])
+    age = IntegerField('Age', validators=[Optional()])
+    notes = TextAreaField('Notes', validators=[Optional()])
+    available = BooleanField('Available for adoption?')
+
+________FORM.html________
+
+        {{ form.hidden_tag() }}
+
+        {% for field in form if field.widget.input_type != 'hidden' %}
+        <p>
+            {{ field }}
+
+            {% for err in field.errors %}
+            <p class="error"> {{ err }} </p>
+            {% endfor %}
+
+        </p>
+        {% endfor %}
+        <button type="submit">Submit</button>
+
+
+________SEED.PY_________
+from app import app
+from models import db, Cupcake
+
+
+db.drop_all()
+db.create_all()
+
+CREATE SOME MODEL INSTANCES TO POPULATE YOUR DATABASE
+
+db.session.add_all([LIST OF INSTANCES])
+db.session.commit()
+
+________TESTS.PY_________
+from unittest import TestCase
+
+from app import app
+from models import db, Cupcake
+
+# Use test database and don't clutter tests with SQL
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///TESTING DATABASE_test'
+app.config['SQLALCHEMY_ECHO'] = False
+
+# Make Flask errors be real errors, rather than HTML pages with error info
+app.config['TESTING'] = True
+
+db.drop_all()
+db.create_all()
+
+
+PROVIDE DATA YOU MIGHT FIND NECESSARY
+
+
+class APP_NAMEViewsTestCase(TestCase):
+    """Tests for views of API."""
+
+    def setUp(self):
+        """APPLIES BEFORE EACH TEST"""
+
+        MODEL.query.delete()
+
+        NEWMODELINSTANCEFORTEST = MODEL(INSTANCE_DATA)
+        db.session.add(THEINSTANCE)
+        db.session.commit()
+
+        self.cupcake = cupcake
+
+    def tearDown(self):
+        """APPLIES AFTER EACH TEST"""
+
+        db.session.rollback()
+
+    def SAMPLETEST(self):
+        with app.test_client() as client:
+            resp = client.get("/ROUTE TO TEST")
+
+            self.assertEqual(resp.status_code, 200)
+
+            data = HOWEVER YOU ACCESS DATA
+            self.assertEqual

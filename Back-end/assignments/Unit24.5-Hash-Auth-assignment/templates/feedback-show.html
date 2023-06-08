@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}New Feedback{% endblock %}
+{% block pagetitle %}New Feedback{% endblock %}
+{% block body %}
+<h2>{{feedback.title}}</h2>
+<p>{{feedback.content}}</p>
+
+<a class="button" href="/feedback/{{feedback.id}}/update">Edit Post</a>
+
+<form action="/feedback/{{feedback.id}}/delete" method="POST">
+    <button class="button">delete</button>
+</form>
+{% endblock %}

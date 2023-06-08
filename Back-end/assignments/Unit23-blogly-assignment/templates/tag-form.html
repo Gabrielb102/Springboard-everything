@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<a class="title" href="/tags"> 
+    <h3>Tags</h3>
+</a>
+<h2>Create a Tag</h2>
+<form action="{% block link %}{% endblock %}?returnurl={{link_back}}" method="POST">
+   <input type="text" name="new_tag" required>
+   <button class="button" type="submit">Submit</button>
+</form>
+<a href="{% block cancel %}{% endblock %}" class="button delete">Cancel</a>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+body {
+    background-color: lavenderblush;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background-color: black;  
+    font-size: 80px;
+}
+
+img {
+    width: 200px;
+    border: 5px solid;
+    transition: color 400ms;
+}
+
+.letter {
+    transition: color 400ms;
+}

@@ -1,0 +1,3 @@
+This is my Hacker or Snooze Interface, I'm really happy with the work I was able to do, I felt like this project really helped me understand how to successfully use APIs. Completed in about 12 hours :). The map took me about two hours to make, I didn't really use it, and I think I could have made it faster. What really helped me most was having everything in its own aptly named file, that was good. 
+
+At the end of this project I feel confident doing my own front-end work.

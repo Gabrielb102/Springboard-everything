@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<a class="title" href="/users"> 
+    <h2>Users</h2>
+</a>
+<img src="{{user.image_url}}" alt="{{user.first_name}}'s Profile Pic" class="detail-pic">
+<div id="info">
+    <h3>{{user.first_name}} {{user.last_name}}</h3>
+    <p>The bio would go here</p>
+    <div id="posts">
+        <ul> {{user.first_name}}'s posts: 
+        {% for post in posts %}
+        <li>
+            <a href="/users/{{user.id}}/post{{post.id}}">
+                {{post.title}}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/users/{{user.id}}/newpost" method="GET" style="position: relative; left: 36px;">Add a Post</a>
+</div>
+</div>
+<div id="adjustments">
+    <form action="/users/{{user.id}}/edit" method="GET">
+        <button id="edit" class="button" type="submit">EDIT</button>
+    </form>
+    <form action="/users/{{user.id}}/delete" method="POST">
+        <button class="button delete" type="submit">DELETE</button>
+    </form>
+</div>
+{% endblock %}

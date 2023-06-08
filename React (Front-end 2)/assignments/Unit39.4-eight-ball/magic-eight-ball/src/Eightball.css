@@ -1,0 +1,41 @@
+.eightball {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    margin-top: 10px;
+    border-style: solid;
+    border-radius: 500px;
+    border-width: 250px;
+}
+
+.eightball-button {
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+}
+
+.eightball-message {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    width: 100px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.eightball-reset {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+    border-radius: 50px;
+    border-width: 2px;
+    border-color: white;
+}
+
+.eightball-reset :hover {
+    border-color: blue;
+}

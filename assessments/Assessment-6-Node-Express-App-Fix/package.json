@@ -1,0 +1,16 @@
+{
+  "name": "assessment-3-node-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "urls.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "extract-domain": "^2.4.8"
+  }
+}

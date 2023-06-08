@@ -1,0 +1,54 @@
+.ResultCard {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: solid whitesmoke 2px;
+    border-radius: 10px;
+    background-color: white;
+    min-width: 700px;
+    margin-bottom: 15px;
+}
+
+.ResultCard:hover {
+    background-color: whitesmoke;
+    transition-duration: 100ms;
+}
+
+.ResultCard-name {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 0px;
+    padding: 0px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.ResultCard-party {
+    display: inline;
+    font-size: 25px;
+    line-height: 0px;
+    padding: 0px;
+    margin-bottom: 15px;
+}
+
+.ResultCard-office {
+    font-size: 15px;
+    line-height: 5px;
+    color: gray;
+}
+
+.ResultCard-years {
+    font-size: 15px;
+    line-height: 5px;
+    color: gray;
+}
+
+.rep {
+    color: maroon;
+}
+
+.dem {
+    color: navy;
+}

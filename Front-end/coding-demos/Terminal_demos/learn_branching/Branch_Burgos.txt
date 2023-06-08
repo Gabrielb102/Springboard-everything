@@ -1,0 +1,33 @@
+Branching Exercise
+
+Part 1
+
+1. git branch [new branch name] or git checkout -b [new branch name] will create a new branch.
+
+2. A Fast-Forward merge simply layers new changes over old changes. The Recursive merge takes time to "recurse" over the master and the branch being merged to bring the branches together and create a new merge commit between the two parents. 
+
+3. To change to a new branch, git checkout is used.
+
+4. git checkout -d will delete a branch, and git checkout -D will force delete a branch.
+
+5. Merge conflicts happen when the same element is changed in two branches which are being merged. 
+
+--
+
+Part 2
+
+
+git checkout -b yellow
+*change some colors and title text on the Meme assignment I did earlier*
+git add .
+git commit -m "yellow theme"
+git checkout master
+*change the same css code to be gray, and the title text to say Main*
+git add .
+git commit -m "main made neutral"
+git merge yellow
+*resolve the Conflict by ultimately just picking the yellow changes*
+git status
+open MEME.html
+
+And it looks good!
